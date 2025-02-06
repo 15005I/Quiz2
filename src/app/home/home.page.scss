@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -13,7 +12,7 @@
   line-height: 26px;
 }
 
-#container p {
+#container p{
   font-size: 16px;
   line-height: 22px;
 
@@ -22,6 +21,21 @@
   margin: 0;
 }
 
-#container a {
+#container a{
   text-decoration: none;
+}
+
+ion-card{
+  background-color: rgb(96, 100, 39);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 20px;
+  text-decoration: underline;
+}
+
+div{
+  background-color: rgb(139, 113, 0);
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 20px;
 }

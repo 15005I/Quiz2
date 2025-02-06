@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JokesService } from '../jokes.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,17 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  randomJoke: any;
+  listCategories: any = [];
+  constructor(private jokesService: JokesService){}
 
-  constructor() {}
+  ngOnInit() {
+    this.jokesService.getCategories().subscribe((data) => {
+      this.listCategories = data;
+    });
 
+    this.jokesService.getRandomJoke().subscribe((data) => {
+      this.randomJoke = data;
+    });
+  }
 }
